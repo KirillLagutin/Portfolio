@@ -156,6 +156,7 @@ body.switchMode .header__link-switch:after {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-bottom: 100px;
 }
 
 .intro__header__title {
@@ -181,8 +182,9 @@ body.switchMode .intro__header__title {
 .about {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 30vh;
     padding: 20px 0;
+    margin-bottom: 100px;
 }
 
 .about__desc-par {
@@ -217,7 +219,8 @@ body.switchMode .about__desc-par {
 }
 
 .portfolio__item-pic {
-    max-width: 100%;
+    width: 100%;
+    height: 260px;
 }
 
 .portfolio__button {
