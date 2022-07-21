@@ -1,27 +1,65 @@
-$(document).ready(function() {
-    // Переключатель темы
-    $('.header__item-switch, .header__link-switch-desc').click(()=>{
-        $('body').toggleClass('switchMode');
-    });
+// Theme switcher
 
-    // Плавность для всех якорей
-    $('a[href^="#"]').click(function (e) {
-        e.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({
-            scrollTop: top
-        }, 900);
+(function () {
+    const switcher = document.querySelector('.switch');
+    const body = document.querySelector('body'); 
+    switcher.addEventListener('click', () => {
+        body.classList.toggle('switchMode')
     });
+}());
 
-    // Фиксированное меню
-    onscroll = ()=>{
-        if(scrollY > 10) {
-            $('.header').addClass('header__fixed');
+
+//Background menu
+
+(function () {
+    const header = document.querySelector('.header');
+    window.onscroll = () => {
+        if (window.pageYOffset > 50) {
+            header.classList.add('header_active');
         }
-        else if(scrollY < 10) {
-            $('.header').removeClass('header__fixed');
+        else {
+            header.classList.remove('header_active');
         }
     };
-});
+}());
 
+
+// Scroll to anchors
+
+(function () {
+
+    const smoothScroll = function (targetEl, duration) {
+        const headerElHeight =  document.querySelector('.header').clientHeight;
+        let target = document.querySelector(targetEl);
+        let targetPosition = target.getBoundingClientRect().top - headerElHeight;
+        let startPosition = window.pageYOffset;
+        let startTime = null;
+    
+        const ease = function(t,b,c,d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        };
+    
+        const animation = function(currentTime){
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = ease(timeElapsed, startPosition, targetPosition, duration);
+            window.scrollTo(0,run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        };
+        requestAnimationFrame(animation);
+    };
+
+    const scrollTo = function () {
+        const links = document.querySelectorAll('.js-scroll');
+        links.forEach(each => {
+            each.addEventListener('click', function () {
+                const currentTarget = this.getAttribute('href');
+                smoothScroll(currentTarget, 1000);
+            });
+        });
+    };
+    scrollTo();
+}());

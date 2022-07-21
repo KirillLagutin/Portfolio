@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -19,14 +19,28 @@
 
     <div class="wrapper">
         <div class="header__inner">
-            <div class="header__logo"><a href="#intro" class="header__logo__link">Кирилл</a></div>
+            <div class="header__logo">
+				<a href="#intro" class="header__logo__link js-scroll">Кирилл</a>
+			</div>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item"><a href="#about" class="header__link">Обо мне</a></li>
-                    <li class="header__item"><a href="#portfolio" class="header__link">Портфолио</a></li>
-                    <li class="header__item"><a href="#contacts" class="header__link">Контакты</a></li>
-                    <li class="header__item-switch"><a href="#" class="header__link-switch"></a></li>
-                    <li class="header__item"><a href="#" class="header__link-switch-desc">Тема</a></li>
+                    <li class="header__item">
+						<a href="#about" class="header__link js-scroll">Обо мне</a>
+					</li>
+                    <li class="header__item">
+						<a href="#portfolio" class="header__link js-scroll">Портфолио</a>
+					</li>
+                    <li class="header__item">
+						<a href="#contacts" class="header__link js-scroll">Контакты</a>
+					</li>
+					<div class="switch">
+                    <li class="header__item-switch">
+						<a href="#!" class="header__link-switch"></a>
+					</li>
+                    <li class="header__item">
+						<a href="#!" class="header__link">Тема</a>
+					</li>
+					</div>
                 </ul>
             </nav>
         </div>
@@ -38,7 +52,7 @@
     <main class="main">
 
 <!-- Intro start -->
-    <div class="intro wrapper anchor" id="intro">
+    <div class="intro wrapper" id="intro">
         <div class="intro__inner">
             <div class="intro__header">
                 <h1 class="intro__header__title">
@@ -54,7 +68,7 @@
 <!-- Intro end -->
 
 <!-- About start -->
-    <section class="about anchor" id="about">
+    <section class="about" id="about">
         <div class="wrapper">
             <h2 class="about__title section-title">
                 Обо мне
@@ -64,7 +78,7 @@
                     Привет, меня зовут Кирилл, и я начинающий фронтенд-разработчик. 
                     Строю новую карьеру на том, что действительно нравится. 
                     В течение года, в Компьютерной Академии ТОР (бывший ШАГ), я оттачивал свои навыки веб-разработчика, 
-                    изучая HTML, CSS, JavaScript, React, MySQL, WordPress, и продолжаю их оттачивать.</p>
+                    изучая HTML, CSS, JavaScript, React, ASP.NET Core, MySQL, WordPress, и продолжаю их оттачивать.</p>
                 <p class="about__desc-par">
 
                 </p>
@@ -73,7 +87,7 @@
 <!-- About end -->
 
 <!-- Portfolio start -->
-    <section class="portfolio anchor" id="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="wrapper">
             <h2 class="portfolio__title section-title">
                 Портфолио
@@ -118,7 +132,7 @@
 <!-- Portfolio end -->
 
 <!-- Contacts start -->
-    <section class="contacts anchor" id="contacts">
+    <section class="contacts" id="contacts">
         <div class="wrapper">
             <h2 class="contacts__title section-title">
                 Контакты
@@ -141,7 +155,6 @@
     </footer>
 <!-- Footer end -->
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
