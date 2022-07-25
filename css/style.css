@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: default;
+    user-select: none;
 }
 
 body {
@@ -35,7 +37,8 @@ body.switchMode .section-title {
 .button {
     display: inline-block;
     background: #f83b3a;
-    color: #fff;
+    color: #292929;
+    font-size: 20px;
     font-weight: bold;
     text-decoration: none;
     padding: 15px 30px;
@@ -44,8 +47,7 @@ body.switchMode .section-title {
 }
 
 body.switchMode .button {
-    color: #000;
-    font-weight: bold;
+    color: #eee;
 }
 
 .button:hover, .button:focus, .button:active {
@@ -105,6 +107,7 @@ body.switchMode .header_active {
 
 .switch {
     display: flex;
+    justify-content: space-between;
 }
 
 .header__item:last-child {
@@ -113,8 +116,7 @@ body.switchMode .header_active {
 }
 
 .header__link {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
@@ -135,16 +137,15 @@ body.switchMode .header__link {
     position: relative;
     width: 44px;
     height: 24px;
-
     border: 1px solid #ccc;
     border-radius: 10em;
-    background: #fff;
+    background: #292929;
     overflow: hidden;
-    cursor: pointer;
+    margin: auto;
 }
 
 body.switchMode .header__item-switch {
-    background: #fff;
+    background: #eee;
 }
 
 .header__link-switch:after {
@@ -154,13 +155,14 @@ body.switchMode .header__item-switch {
     left: 0;
     width: 24px;
     height: 24px;
-    background: #555;
+    background: #eee;
     border-radius: 50%;
     transition: .7s;
 }
 
 body.switchMode .header__link-switch:after {
     left: 18px;
+    background: #292929;;
 }
 
 .header__burger {
@@ -209,9 +211,11 @@ body.switchMode .burger__line {
 
 .intro__inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0 80px;
 }
 
 .intro__header__title {
@@ -229,6 +233,7 @@ body.switchMode .intro__header__title {
 }
 
 .intro__avatar__photo {
+    width: 460px;
     border-radius: 50%;
 }
 /* Intro end --------------------------------------------*/
@@ -262,17 +267,36 @@ body.switchMode .about__desc-par {
 .portfolio__items {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .portfolio__item {
     position: relative;
     display: block;
     width: calc(100% / 3 - 10px);
-    margin: 0 10px 15px 0;
+    margin-bottom: 30px;
 }
 
 .portfolio__item:last-child {
     margin-right: 0;
+}
+
+.portfolio__item-link {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.portfolio__item-link:hover,
+.portfolio__item-link:focus,
+.portfolio__item-link:active {
+    opacity: .7;
+}
+
+body.switchMode .portfolio__item-link {
+    color: #000;
 }
 
 .portfolio__item-pic {
@@ -323,24 +347,24 @@ body.switchMode .about__desc-par {
     font-size: 20px;
     border: 1px solid #333;
     border-radius: 3px;
+    resize: none;
 }
 
 .contacts__form-button {
     width: 100%;
     background: #f83b3a;
-    color: #fff;
+    color: #292929;
     font-weight: bold;
     text-decoration: none;
     padding: 15px 30px;
     margin-top: 20px;
     border-radius: 5px;
     border: none;
-    font-size: 18px;
-    cursor: pointer;
+    font-size: 20px;
 }
 
 body.switchMode .contacts__form-button {
-    color: #000;
+    color: #eee;
     font-weight: bold;
 }
 
@@ -360,8 +384,24 @@ body.switchMode .contacts__form-button {
 }
 
 .footer__copyright {
-     text-align: center;
-     color: #fff;
+    text-align: center;
+    color: #fff;
+}
+
+.footer__copyright-link {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__copyright-link:hover,
+.footer__copyright-link:focus,
+.footer__copyright-link:active {
+    opacity: .7;
+}
+
+body.switchMode .footer__copyright-link {
+    color: #000;
 }
 
 body.switchMode .footer {
@@ -405,9 +445,11 @@ body.switchMode .footer__copyright {
     .header__item:last-child {
         margin-bottom: 0;
     }
+    .header__item-switch {
+        width: 62px;
+    }
     .header__link {
         font-size: 42px;
-        line-height: 48px;
     }
     .header__nav-close {
         position: absolute;
