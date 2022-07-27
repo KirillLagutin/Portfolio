@@ -102,7 +102,7 @@ body.switchMode .header_active {
 }
 
 .header__item {
-    margin-right: 80px;
+    margin-right: 60px;
 }
 
 .switch {
@@ -139,13 +139,13 @@ body.switchMode .header__link {
     height: 24px;
     border: 1px solid #ccc;
     border-radius: 10em;
-    background: #292929;
+    background: #eee;
     overflow: hidden;
     margin: auto;
 }
 
 body.switchMode .header__item-switch {
-    background: #eee;
+    background: #292929;
 }
 
 .header__link-switch:after {
@@ -155,14 +155,14 @@ body.switchMode .header__item-switch {
     left: 0;
     width: 24px;
     height: 24px;
-    background: #eee;
+    background: #000;
     border-radius: 50%;
     transition: .7s;
 }
 
 body.switchMode .header__link-switch:after {
     left: 18px;
-    background: #292929;;
+    background: #fff;
 }
 
 .header__burger {
@@ -212,10 +212,9 @@ body.switchMode .burger__line {
 .intro__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    padding: 0 80px;
 }
 
 .intro__header__title {
@@ -267,14 +266,15 @@ body.switchMode .about__desc-par {
 .portfolio__items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 10px;
 }
 
 .portfolio__item {
     position: relative;
     display: block;
-    width: calc(100% / 3 - 10px);
-    margin-bottom: 30px;
+    width: 380px;
+    margin-bottom: 40px;
 }
 
 .portfolio__item:last-child {
@@ -301,7 +301,8 @@ body.switchMode .portfolio__item-link {
 
 .portfolio__item-pic {
     width: 100%;
-    height: 260px;
+    height: 270px;
+    margin-bottom: 10px;
 }
 
 .portfolio__item-pic:hover,
@@ -416,6 +417,7 @@ body.switchMode .footer__copyright {
 
 /* Media start */
 @media screen and (max-width: 767px) {
+
     .header__burger {
         display: block;
     }
@@ -476,5 +478,38 @@ body.switchMode .footer__copyright {
     }
     .header__nav-close-line:last-child {
         transform: translateY(-50%) rotate(-45deg);
+    }
+
+    .intro__inner{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .intro__header {
+        margin-bottom: 60px;
+    }
+}
+
+
+@media screen and (max-width: 1000px)
+and (min-width: 768px) {
+
+    .intro__header__title {
+        font-size: 30px;
+    }
+
+    .intro__avatar__photo {
+        width: 350px;
+    }
+}
+
+
+@media screen and (max-width: 1206px) {
+    
+    .about__title, .about__desc-par, 
+    .portfolio__title, .portfolio__item, 
+    .contacts__title {
+        text-align: center;
     }
 }
