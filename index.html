@@ -68,7 +68,7 @@
                 <h1 class="intro__header__title">
                     Привет, <br>я Кирилл, <br><span class="intro__header__title-prof">Веб-программист</span>
                 </h1>
-                <a href="#" class="intro__header__title-button button">Связаться со мной</a>
+                <a href="#!" class="intro__header__title-button button">Связаться со мной</a>
             </div>
             <div class="intro__avatar">
                 <img src="img/Kirill.jpg" alt="Kirill" class="intro__avatar__photo">
@@ -87,8 +87,8 @@
                 <p class="about__desc-par">
                     Привет, меня зовут Кирилл, и я начинающий фронтенд-разработчик. 
                     Строю новую карьеру на том, что действительно нравится. 
-                    В течение года, в Компьютерной Академии ТОР (бывший ШАГ), я оттачивал свои навыки веб-разработчика, 
-                    изучая HTML, CSS, JavaScript, React, ASP.NET, MySQL, WordPress, и продолжаю их оттачивать.</p>
+                    В течение одного с половиной года, в Компьютерной Академии ТОР (бывший ШАГ), я оттачивал свои навыки веб-разработчика, 
+                    изучая HTML, CSS, JavaScript, React, ASP.NET, Базы данных, и продолжаю их оттачивать.</p>
                 <p class="about__desc-par">
 
                 </p>
@@ -165,10 +165,10 @@
             <h2 class="contacts__title section-title">
                 Контакты
             </h2>
-            <form action="" class="contacts__form">
-                <input type="text" placeholder="Ваше имя" class="contacts__forms-name">
-                <input type="text" placeholder="Телефон" class="contacts__forms-phone">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Ваше сообщение" class="contacts__form-text"></textarea>
+            <form action="mail_script.php" method="post" class="contacts__form">
+                <input type="text" name="name" placeholder="Ваше имя" class="contacts__forms-name">
+                <input type="tel" name="telephone" placeholder="Телефон" class="contacts__forms-phone">
+                <textarea name="message" cols="30" rows="10" placeholder="Ваше сообщение" class="contacts__form-text"></textarea>
                 <button type="submit" class="contacts__form-button">Отправить</button>
             </form>
         </div>

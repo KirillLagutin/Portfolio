@@ -20,7 +20,7 @@ body.switchMode {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 30px;
 }
 
 .section-title {
@@ -137,7 +137,7 @@ body.switchMode .header__link {
     position: relative;
     width: 44px;
     height: 24px;
-    border: 1px solid #ccc;
+    border: 1px solid #aaa;
     border-radius: 10em;
     background: #eee;
     overflow: hidden;
@@ -145,7 +145,7 @@ body.switchMode .header__link {
 }
 
 body.switchMode .header__item-switch {
-    background: #292929;
+    background: #191919;
 }
 
 .header__link-switch:after {
@@ -155,14 +155,14 @@ body.switchMode .header__item-switch {
     left: 0;
     width: 24px;
     height: 24px;
-    background: #000;
+    background: #292929;
     border-radius: 50%;
     transition: .7s;
 }
 
 body.switchMode .header__link-switch:after {
     left: 18px;
-    background: #fff;
+    background: #eee;
 }
 
 .header__burger {
@@ -212,7 +212,7 @@ body.switchMode .burger__line {
 .intro__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -273,7 +273,7 @@ body.switchMode .about__desc-par {
 .portfolio__item {
     position: relative;
     display: block;
-    width: 380px;
+    width: 370px;
     margin-bottom: 40px;
 }
 
