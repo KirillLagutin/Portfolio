@@ -68,7 +68,7 @@
                 <h1 class="intro__header__title">
                     Привет, <br>я Кирилл, <br><span class="intro__header__title-prof">Веб-программист</span>
                 </h1>
-                <a href="#!" class="intro__header__title-button button">Связаться со мной</a>
+                <a href="#contacts" class="intro__header__title-button button">Связаться со мной</a>
             </div>
             <div class="intro__avatar">
                 <img src="img/Kirill.jpg" alt="Kirill" class="intro__avatar__photo">
@@ -165,9 +165,10 @@
             <h2 class="contacts__title section-title">
                 Контакты
             </h2>
-            <form action="mail_script.php" method="post" class="contacts__form">
+            <form action="https://formspree.io/f/mrgdzzjb" method="post" class="contacts__form">
                 <input type="text" name="name" placeholder="Ваше имя" class="contacts__forms-name">
                 <input type="tel" name="telephone" placeholder="Телефон" class="contacts__forms-phone">
+                <input type="email" name="email" placeholder="Email" class="contacts__forms-email">
                 <textarea name="message" cols="30" rows="10" placeholder="Ваше сообщение" class="contacts__form-text"></textarea>
                 <button type="submit" class="contacts__form-button">Отправить</button>
             </form>
@@ -182,6 +183,40 @@
         <p class="footer__copyright"><a href="https://github.com/KirillLagutin?tab=repositories" class="footer__copyright-link" target="_blank">Kirill Lagutin</a> 2022</p>
     </footer>
 <!-- Footer end -->
+
+<!-- Multibutton start -->
+<div class="multibutton">
+    <ul class="multibutton__list">
+        <li class="multibutton__phone">
+            <a href="tel:+79107424614" class="multibutton__title">
+                Телефон
+            </a>
+            <a href="tel:+79107424614" class="multibutton__icon">
+                <img src="/svg/phone.svg" alt="call">
+            </a>
+        </li>
+        <li class="multibutton__whatsap">
+            <a href="https://wa.me/+79107424614" class="multibutton__title">
+                Whatsap
+            </a>
+            <a href="https://wa.me/+79107424614" class="multibutton__icon">
+                <img src="/svg/whatsapp.svg" alt="whatsap">
+            </a>
+        </li>
+        <li class="multibutton__viber">
+            <a href="viber://chat?number=%2b79107424614" class="multibutton__title">
+                Viber
+            </a>
+            <a href="viber://chat?number=%2b79107424614" class="multibutton__icon">
+                <img src="/svg/viber.svg" alt="viber">
+            </a>
+        </li>
+    </ul>
+    <div class="multibutton__button">
+        <img src="/svg/call.svg" alt="button">
+    </div>
+</div>
+<!-- Multibutton end -->
 
     <script src="js/script.js"></script>
 </body>

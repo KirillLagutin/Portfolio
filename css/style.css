@@ -330,7 +330,9 @@ body.switchMode .portfolio__item-link {
     text-align: center;
 }
 
-.contacts__forms-name, .contacts__forms-phone {
+.contacts__forms-name, 
+.contacts__forms-phone,
+.contacts__forms-email {
     width: 100%;
     height: 70px;
     margin-bottom: 20px;
@@ -415,7 +417,7 @@ body.switchMode .footer__copyright {
 /* Footer end -------------------------------------------*/
 
 
-/* Media start */
+/* Media start ------------------------------------------*/
 @media screen and (max-width: 767px) {
 
     .header__burger {
@@ -507,9 +509,127 @@ and (min-width: 768px) {
 
 @media screen and (max-width: 1206px) {
     
+    .intro__inner {
+        justify-content: space-evenly;
+    }
+
     .about__title, .about__desc-par, 
     .portfolio__title, .portfolio__item, 
     .contacts__title {
         text-align: center;
     }
 }
+/* Media end ------------------------------------------*/
+
+
+/* Multibutton start ----------------------------------*/
+.multibutton__phone .multibutton__icon{
+    background: #03a9f4;
+}
+
+.multibutton__whatsap .multibutton__icon{
+    background: #30d64f;
+}
+
+.multibutton__viber .multibutton__icon{
+    background: #7b519d;
+}
+
+.multibutton {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    right: 16px;
+    bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: .2s ease;
+}
+
+.multibutton:hover {
+    width: auto;
+    height: auto;
+}
+
+.multibutton:hover .multibutton__list {
+    position: relative;
+    width: 200px;
+    top: auto;
+    bottom: 10px;
+    visibility: visible;
+}
+
+.multibutton:hover .multibutton__phone,
+.multibutton:hover .multibutton__whatsap,
+.multibutton:hover .multibutton__viber {
+    visibility: visible;
+    opacity: 1;
+    transition: .3s ease;
+    transform: scaleX(1) scaleY(1) translateY(0);
+}
+
+.multibutton__button {
+    width: 70px;
+    height: 70px;
+    background: #f83b3a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.multibutton__button img {
+    width: 35px;
+    height: 35px;
+}
+
+.multibutton__phone,
+.multibutton__whatsap,
+.multibutton__viber {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    transform: scaleX(.4) scaleY(.4) translateY(150px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.multibutton__list {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: 13px;
+    transition: .3s ease;
+}
+
+.multibutton__title {
+    font-size: 12px;
+    background: #fff;
+    color: #191919;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.multibutton__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.multibutton__icon img {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+/* Multibutton end ----------------------------------*/
