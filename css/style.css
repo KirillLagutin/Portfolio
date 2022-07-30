@@ -537,14 +537,13 @@ and (min-width: 768px) {
 
 .multibutton {
     position: fixed;
-    width: 70px;
-    height: 70px;
-    right: 16px;
-    bottom: 14px;
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    overflow: hidden;
     transition: .2s ease;
 }
 
@@ -571,18 +570,36 @@ and (min-width: 768px) {
 }
 
 .multibutton__button {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: #f83b3a;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: animation_button 3s infinite;
+    transition: .2s;
 }
 
-.multibutton__button img {
-    width: 35px;
-    height: 35px;
+@keyframes animation_button {
+    0% {
+        box-shadow: 0 0 0 0 rgb(248, 58, 58);
+    }   
+    50% {
+        box-shadow: 0 0 0 10px rgb(248, 58, 58, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 12px rgb(248, 58, 58, 0);
+    }
+}
+
+.multibutton__button svg {
+    width: 30px;
+    fill: #000;
+}
+
+body.switchMode .multibutton__button svg {
+    fill: #fff;
 }
 
 .multibutton__phone,
@@ -594,6 +611,7 @@ and (min-width: 768px) {
     transform: scaleX(.4) scaleY(.4) translateY(150px);
     opacity: 0;
     visibility: hidden;
+    cursor: pointer;
 }
 
 .multibutton__list {
@@ -602,18 +620,23 @@ and (min-width: 768px) {
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    right: 13px;
+    right: 9px;
     transition: .3s ease;
 }
 
 .multibutton__title {
     font-size: 12px;
     background: #fff;
-    color: #191919;
+    color: #000;
     text-decoration: none;
     padding: 10px;
     border-radius: 30px;
     cursor: pointer;
+}
+
+body.switchMode .multibutton__title {
+    background: #292929;
+    color: #fff;
 }
 
 .multibutton__icon {
@@ -627,9 +650,13 @@ and (min-width: 768px) {
     cursor: pointer;
 }
 
-.multibutton__icon img {
+.multibutton__icon svg {
     width: 26px;
-    height: 26px;
+    fill: #000;
     cursor: pointer;
+}
+
+body.switchMode .multibutton__icon svg {
+    fill: #fff;
 }
 /* Multibutton end ----------------------------------*/
