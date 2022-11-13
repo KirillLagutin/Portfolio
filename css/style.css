@@ -55,10 +55,11 @@ body.switchMode .button {
 }
 
 .about__title, .about__desc-par, 
-    .portfolio__title, .portfolio__item, 
-    .contacts__title {
-        text-align: center;
-    }
+.portfolio__title, .portfolio__item, 
+.contacts__title, .list__tehnologic {
+    text-align: center;
+}
+
 
 /* Header start ------------------------------------------*/
 .header {
@@ -249,16 +250,32 @@ body.switchMode .intro__header__title {
     position: relative;
     width: 100%;
     height: 30vh;
-    margin-bottom: 100px;
+    margin-bottom: 400px;
 }
 
 .about__desc-par {
     font-size: 18px;
     color: #fff;
-    margin-bottom: 25px;
 }
 
-body.switchMode .about__desc-par {
+.list__tehnologic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 35%;
+    margin: auto;
+    font-size: 18px;
+    color: #fff;
+}
+
+.list__tehnolic-left,
+.list__tehnolic-right {
+    width: 50%;
+    margin-top: 10px;
+}
+
+body.switchMode .about__desc-par,
+body.switchMode .list__tehnologic {
     color: #000;
 }
 /* About end --------------------------------------------*/
