@@ -54,6 +54,12 @@ body.switchMode .button {
     opacity: .7;
 }
 
+.about__title, .about__desc-par, 
+    .portfolio__title, .portfolio__item, 
+    .contacts__title {
+        text-align: center;
+    }
+
 /* Header start ------------------------------------------*/
 .header {
     position: fixed;
@@ -511,12 +517,6 @@ and (min-width: 768px) {
     
     .intro__inner {
         justify-content: space-evenly;
-    }
-
-    .about__title, .about__desc-par, 
-    .portfolio__title, .portfolio__item, 
-    .contacts__title {
-        text-align: center;
     }
 }
 /* Media end ------------------------------------------*/
