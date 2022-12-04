@@ -213,7 +213,7 @@ body.switchMode .burger__line {
     width: 100%;
     height: 100%;
     padding-top: 240px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
 }
 
 .intro__inner {
@@ -249,8 +249,8 @@ body.switchMode .intro__header__title {
 .about {
     position: relative;
     width: 100%;
-    height: 30vh;
-    margin-bottom: 400px;
+    height: 100%;
+    margin-bottom: 150px;
 }
 
 .about__desc-par {
@@ -283,7 +283,7 @@ body.switchMode .list__tehnologic {
 
 /* Portfolio start --------------------------------------*/
 .portfolio {
-    margin-bottom: 200px;
+    margin: 200px 0;
 }
 
 .portfolio__items {
@@ -298,6 +298,14 @@ body.switchMode .list__tehnologic {
     display: block;
     width: 370px;
     margin-bottom: 40px;
+}
+
+.portfolio__item:nth-child(n + 7) {
+    display: none;
+}
+
+.portfolio__item.is-visible {
+    display: block;
 }
 
 .portfolio__item:last-child {
@@ -505,6 +513,10 @@ body.switchMode .footer__copyright {
         transform: translateY(-50%) rotate(-45deg);
     }
 
+    .intro {
+        padding-top: 140px;
+    }
+
     .intro__inner{
         display: flex;
         justify-content: center;
@@ -512,7 +524,16 @@ body.switchMode .footer__copyright {
     }
 
     .intro__header {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
+    }
+
+    .portfolio {
+        margin-bottom: 100px;
+        margin-top: -50px;
+    }
+
+    .contacts {
+        margin-bottom: 25px;
     }
 }
 
@@ -541,15 +562,15 @@ and (min-width: 768px) {
 
 /* Multibutton start ----------------------------------*/
 .multibutton__phone .multibutton__icon{
-    background: #03a9f4;
+    background: #f83b3a;
 }
 
 .multibutton__whatsap .multibutton__icon{
     background: #30d64f;
 }
 
-.multibutton__viber .multibutton__icon{
-    background: #7b519d;
+.multibutton__telegram .multibutton__icon{
+    background: #1968d6;
 }
 
 .multibutton {
@@ -579,7 +600,7 @@ and (min-width: 768px) {
 
 .multibutton:hover .multibutton__phone,
 .multibutton:hover .multibutton__whatsap,
-.multibutton:hover .multibutton__viber {
+.multibutton:hover .multibutton__telegram {
     visibility: visible;
     opacity: 1;
     transition: .3s ease;
@@ -621,7 +642,7 @@ body.switchMode .multibutton__button svg {
 
 .multibutton__phone,
 .multibutton__whatsap,
-.multibutton__viber {
+.multibutton__telegram {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
@@ -664,13 +685,11 @@ body.switchMode .multibutton__title {
     align-items: center;
     justify-content: center;
     margin-left: 10px;
-    cursor: pointer;
 }
 
 .multibutton__icon svg {
     width: 26px;
     fill: #000;
-    cursor: pointer;
 }
 
 body.switchMode .multibutton__icon svg {

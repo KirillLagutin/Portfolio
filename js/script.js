@@ -90,3 +90,24 @@
     };
     scrollTo();
 }());
+
+
+// Show More
+(function () {
+
+    const showMore = document.querySelector('.portfolio__button');
+    const itemLength = document.querySelectorAll('.portfolio__item').length;
+    let items = 6;
+
+    showMore.addEventListener('click', () => {
+        items += 6;
+        const array = Array.from(document.querySelector('.portfolio__items').children);
+        const visibleItems = array.slice(0, items);
+
+        visibleItems.forEach(el => el.classList.add('is-visible'));
+
+        if(visibleItems.length === itemLength) {
+            showMore.style.display = 'none';
+        }
+    });
+}());
