@@ -449,6 +449,27 @@ body.switchMode .footer__copyright {
 
 
 /* Media start ------------------------------------------*/
+@media screen and (max-width: 1206px) {
+    
+    .intro__inner {
+        justify-content: space-evenly;
+    }
+}
+
+
+@media screen and (max-width: 1000px)
+and (min-width: 768px) {
+
+    .intro__header__title {
+        font-size: 30px;
+    }
+
+    .intro__avatar__photo {
+        width: 350px;
+    }
+}
+
+
 @media screen and (max-width: 767px) {
 
     .header__burger {
@@ -527,6 +548,10 @@ body.switchMode .footer__copyright {
         margin-bottom: 50px;
     }
 
+    .list__tehnologic {
+        width: 50%;
+    }
+
     .portfolio {
         margin-bottom: 100px;
         margin-top: -50px;
@@ -538,23 +563,53 @@ body.switchMode .footer__copyright {
 }
 
 
-@media screen and (max-width: 1000px)
-and (min-width: 768px) {
-
-    .intro__header__title {
-        font-size: 30px;
-    }
-
+@media screen and (max-width: 500px) {
+    
     .intro__avatar__photo {
-        width: 350px;
+        width: 100%;
+    }
+    .list__tehnologic {
+        width: 70%;
     }
 }
 
 
-@media screen and (max-width: 1206px) {
+@media screen and (max-width: 450px) {
     
-    .intro__inner {
-        justify-content: space-evenly;
+    .portfolio__item-pic {
+        width: 100%;
+        height: auto;
+    }
+    .intro__header__title {
+        font-size: 40px;
+    }
+    .list__tehnologic {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 362px) {
+    
+    .header__link {
+        font-size: 30px;
+    } 
+    .intro__header__title {
+        font-size: 30px;
+    }
+}
+
+
+@media screen and (max-width: 306px) {
+    
+    .header__link {
+        font-size: 24px;
+    } 
+    .intro__header__title {
+        font-size: 24px;
+    }
+    .section-title {
+        font-size: 24px;
     }
 }
 /* Media end ------------------------------------------*/
@@ -632,7 +687,8 @@ and (min-width: 768px) {
 }
 
 .multibutton__button svg {
-    width: 30px;
+    width: 33px;
+    margin: 5px 2px 0 0;
     fill: #000;
 }
 
@@ -688,7 +744,7 @@ body.switchMode .multibutton__title {
 }
 
 .multibutton__icon svg {
-    width: 26px;
+    width: 30px;
     fill: #000;
 }
 
