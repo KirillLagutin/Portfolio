@@ -30,7 +30,14 @@ body.switchMode {
     margin-bottom: 45px;
 }
 
-body.switchMode .section-title {
+.section-subtitle {
+    letter-spacing: 2px; 
+    color: #fff;
+    margin-bottom: 45px;
+}
+
+body.switchMode .section-title,
+body.switchMode .section-subtitle {
     color: #000;
 }
 
