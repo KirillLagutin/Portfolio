@@ -8,7 +8,7 @@
         body.classList.toggle('switchMode')
     });
 }());
-
+//--------------------------------------------------------------------------------
 
 //Background menu
 
@@ -24,7 +24,7 @@
         }
     };
 }());
-
+//---------------------------------------------------------------------------------
 
 // Burger handler
 
@@ -49,7 +49,7 @@
     }
     
 }());
-
+//----------------------------------------------------------------------------------
 
 // Scroll to anchors
 
@@ -90,12 +90,14 @@
     };
     scrollTo();
 }());
-
+//-------------------------------------------------------------------------------------
 
 // Show More
+
 (function () {
 
     const showMore = document.querySelector('.portfolio__button');
+    const descButton = document.querySelector('.portfolio__button-desc');
     const itemLength = document.querySelectorAll('.portfolio__item').length;
     let items = 6;
 
@@ -108,6 +110,8 @@
 
         if(visibleItems.length === itemLength) {
             showMore.style.display = 'none';
+            descButton.style.display = 'none';
         }
     });
 }());
+//--------------------------------------------------------------------------------------

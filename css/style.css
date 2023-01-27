@@ -47,6 +47,7 @@ body.switchMode .section-subtitle {
     color: #292929;
     font-size: 20px;
     font-weight: bold;
+    letter-spacing: 1.5px;
     text-decoration: none;
     padding: 15px 30px;
     margin-top: 20px;
@@ -63,7 +64,8 @@ body.switchMode .button {
 
 .about__title, .about__desc-par, 
 .portfolio__title, .portfolio__item, 
-.contacts__title, .list__tehnologic {
+.contacts__title, .list__tehnologic,
+.portfolio__button-desc {
     text-align: center;
 }
 
@@ -272,7 +274,7 @@ body.switchMode .intro__header__title {
     width: 35%;
     margin: auto;
     font-size: 18px;
-    color: #fff;
+    color: #f83b3a;
 }
 
 .list__tehnolic-left,
@@ -281,8 +283,25 @@ body.switchMode .intro__header__title {
     margin-top: 10px;
 }
 
-body.switchMode .about__desc-par,
+.list__tehnolic-link {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f83b3a;
+}
+
+.list__tehnolic-link:hover,
+.list__tehnolic-link:focus,
+.list__tehnolic-link:active {
+    opacity: .7;
+}
+
 body.switchMode .list__tehnologic {
+    color: #f83b3a;
+}
+
+body.switchMode .about__desc-par {
     color: #000;
 }
 /* About end --------------------------------------------*/
@@ -333,10 +352,6 @@ body.switchMode .list__tehnologic {
     opacity: .7;
 }
 
-body.switchMode .portfolio__item-link {
-    color: #000;
-}
-
 .portfolio__item-pic {
     width: 100%;
     height: 270px;
@@ -349,9 +364,19 @@ body.switchMode .portfolio__item-link {
     opacity: .7;
 }
 
+.portfolio__button-desc {
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
 .portfolio__button {
     display: flex;
     justify-content: center;
+}
+
+body.switchMode .portfolio__item-link,
+body.switchMode .portfolio__button-desc {
+    color: #000;
 }
 /* Portfolio end ----------------------------------------*/
 
@@ -396,6 +421,7 @@ body.switchMode .portfolio__item-link {
     background: #f83b3a;
     color: #292929;
     font-weight: bold;
+    letter-spacing: 1.5px;
     text-decoration: none;
     padding: 15px 30px;
     margin-top: 20px;
